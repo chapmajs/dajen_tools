@@ -14,7 +14,7 @@ def parse_line (line)
   line.gsub!(/COMPLETE/, '')
   line.strip!
   return if line.length < 5
-  line[5..-1].split(' ').collect { |str| str.hex } #.pack('C*')
+  line[5..-1].split(' ').collect { |str| str.hex }
 end
 
 File.readlines(ARGV[0]).drop(1).each do |line|
